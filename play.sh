@@ -34,7 +34,7 @@ case "$1" in
   start)
     echo -n "Starting Play service"
     rm -f ${APP_PATH}/RUNNING_PID
-    su $USER -c "$APP_PATH/bin/alltravels $APP_OPTS >/dev/null" &
+    su $USER -c "$APP_PATH/bin/website $APP_OPTS >/dev/null" &
     RETVAL=$?
     if [ $RETVAL -eq 0 ]; then
 		echo_success
